@@ -1,0 +1,19 @@
+0. Make a python env and run:
+	pip install -r requirements.txt
+
+1. Make a folder for dataset:
+	--- Train: {frames}
+	--- Test: {frames}
+
+2. Run python FrameExtraction.py --video_path arg1 --output_path arg2
+	arg1: path to video
+	arg2: path to folder for extracted frames
+
+3. Execute step 2 for Train and Test till get sufficient training examples
+
+4. Run python train.py --root [path to root directory] --dataset [name of dataset folder in root directory]
+
+5. Run python test.py
+
+
+-- Approx time for 20 epoch (2767872 parameters) ~ 1 hour on CPU
