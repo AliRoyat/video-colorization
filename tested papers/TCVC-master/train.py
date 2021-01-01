@@ -67,8 +67,8 @@ testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batc
 sample_iterator = create_iterator(6, test_set)
 
 print('===> Building model')
-netG = define_G(opt.input_nc, opt.output_nc, opt.ngf, False, [0])
-netD = define_D(opt.input_nc + opt.output_nc, opt.ndf, False, [0])
+netG = define_G(opt.input_nc, opt.output_nc, False, [0])
+netD = define_D(opt.input_nc + opt.output_nc, False, [0])
 
 if opt.checkpoint_path_G and opt.checkpoint_path_D:
     load(opt.checkpoint_path_G, opt.checkpoint_path_D, netG, netD)

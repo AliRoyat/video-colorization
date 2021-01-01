@@ -215,7 +215,7 @@ def spectral_norm(module, mode=True):
 
     return module
 
-def define_G(input_nc, output_nc, ngf, use_dropout=True, gpu_ids=[]):
+def define_G(input_nc, output_nc, ngf=0, use_dropout=True, gpu_ids=[]):
     netG = None
     use_gpu = len(gpu_ids) > 0
     #norm_layer = get_norm_layer(norm_type=norm)
@@ -232,7 +232,7 @@ def define_G(input_nc, output_nc, ngf, use_dropout=True, gpu_ids=[]):
     return netG
 
 
-def define_D(input_nc, ndf, use_sigmoid=True, gpu_ids=[]):
+def define_D(input_nc, ndf=0, use_sigmoid=True, gpu_ids=[]):
     netD = None
     use_gpu = len(gpu_ids) > 0
     if use_gpu:
